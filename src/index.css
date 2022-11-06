@@ -83,7 +83,45 @@ h4{
   font-weight:700; 
   text-transform: uppercase;
 }
+.loading{ 
+  text-align:center;
+  width:100%;
+  font-size:3rem; 
+  font-family: 'mada', sans-serif;
+  font-weight:700; 
+  color: #0022;
+  opacity:.6;
+  animation: loadanime 3s ease infinite;
+}
 
+
+
+@keyframes loadanime{ 
+  0%{ 
+    transform: scale(.5);
+    opacity:0;
+  }
+
+  25%{ 
+    transform: scale(.7);
+    opacity:.3;
+  }
+
+  50%{ 
+    transform:scale(1);
+    opacity:.6
+  }
+
+  75%{  
+    transform:scale(1.2); 
+    opacity:.9
+  }
+
+  100%{ 
+    transform: scale(1.4);
+    opacity:1
+  }
+}
 article.repo .repo__name--privacy{ 
   display:flex; 
   flex-direction: row;
@@ -129,29 +167,32 @@ small.repo__lang{
   font-weight:400; 
   font-family: 'mada', sans-serif;
 }
-.pagination{ 
-  display:flex; 
-  flex-direction: column;
+
+.pagination__wrap{ 
+   display:flex; 
+   gap:.5rem;
+  flex-direction: row;
   justify-content: center;
-  
-}
-ul.pagination__wrap{ 
   align-self:center;
   padding:1rem;
+  
 }
-ul.pagination__wrap li{ 
+.pagination__wrap li{ 
   list-style: none;
+  margin-right:0;
 }
-ul.pagination__wrap li .pg__link{ 
+ .pg__link{ 
+  cursor:pointer;
   text-decoration: none;
   font-size:.9rem; 
   font-family:'poppins', sans-serif;
   text-transform: uppercase;
   font-weight:200;
+  padding:.5rem;
   color:#002311;
 }
 
-ul.pagination__wrap li .pg-btn{
+ .pg-btn{
   background:#526143;
   color:#fff;
   padding:.5rem .9rem;
@@ -161,9 +202,13 @@ ul.pagination__wrap li .pg-btn{
 .prev{ 
   opacity:.7;
 }
-ul.pagination__wrap li .active{ 
+.pg-active{ 
   font-weight:700;
+  
+  border:1px solid #20011f;
+  border-radius:1rem;
 }
+
 
 footer{ 
   border-top:1px solid #526143;
@@ -175,4 +220,34 @@ footer{
   font-weight:600; 
   font-family: 'mada', sans-serif;
   padding:20px 0;
+}
+
+
+/* pagenotfound */
+
+.err__pg-wrap{ 
+  display:flex;
+  gap:5%;
+}
+.err__pg--txt{ 
+  width:45%;
+}
+
+.err__pg--txt h3{ 
+  font-size:4rem;
+  letter-spacing:.4rem;
+  font-family:'montserrat', sans-serif;
+  margin-bottom:1.7rem;
+  
+}
+
+.err__pg--txt p{ 
+  font-size:2rem;
+  font-family:'playfair-display', sans-serif;
+  color:#002112;
+}
+.err__png{ 
+  width:55%; 
+  height:20rem;
+  
 }

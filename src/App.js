@@ -6,6 +6,9 @@ import Home from './components/Home'
 import FetchRepo from './components/FetchRepo'
 import PageNotFound from './components/PageNotFound'
 import Footer from './components/Footer'
+import ErrorBoundary from './components/ErrorBoundary'
+import ErrTest from './components/ErrTest'
+
 
 
 const App = () => {
@@ -13,7 +16,6 @@ const App = () => {
     <>
       <Router> 
       <Header/>
-      
  
         <Routes>
             <Route path='/' element={<Home/>}/>
@@ -22,6 +24,14 @@ const App = () => {
         </Routes>
         
     </Router>
+ 
+
+ 
+    <ErrorBoundary>
+      <ErrTest/>
+    </ErrorBoundary>
+    
+
 
   <Footer />    
     </>

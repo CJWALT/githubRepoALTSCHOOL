@@ -9,20 +9,19 @@ const Header = () => {
           <div className="logo__text">
             <Link to="/" className="nav__link">
               <h2 className="logo">
-                GH <span>repositories</span>
+                GH<span>repositories</span>
               </h2>
             </Link>
           </div>
           <ul className="nav">
             <li>
               <Link to="/" className="nav__link">
-                {" "}
                 Overview
               </Link>
             </li>
             <li>
               <Link to="/issues" className="nav__link">
-                {" "}
+   
                 Issues
               </Link>
             </li>

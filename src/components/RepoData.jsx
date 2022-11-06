@@ -1,9 +1,16 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { useParams} from 'react-router-dom';
 
 const RepoData = () => {
+
+  const {repoId} = useParams();
+  console.log(repoId);  
   return (
-    <div>RepoData</div>
+    <>
+      <p>hey</p>
+      
+    </>
   )
 }
 
-export default RepoData
+export default RepoData;
